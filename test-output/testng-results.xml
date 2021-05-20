@@ -1,85 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="2" failed="0" total="2" passed="0">
+<testng-results skipped="0" failed="0" total="4" passed="4">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="152708" started-at="2021-05-19T12:25:29Z" finished-at="2021-05-19T12:28:01Z">
+  <suite name="TestNg_Smoke_Suite" duration-ms="47" started-at="2021-05-20T12:00:31Z" finished-at="2021-05-20T12:00:31Z">
     <groups>
+      <group name="Regression">
+        <method signature="TestFacebookSignUp.TCID_004_regression()[pri:0, instance:com.scripts.TestFacebookSignUp@28f67ac7]" name="TCID_004_regression" class="com.scripts.TestFacebookSignUp"/>
+        <method signature="TestScript.TCID_004_regression()[pri:0, instance:com.scripts.TestScript@1fbc7afb]" name="TCID_004_regression" class="com.scripts.TestScript"/>
+      </group> <!-- Regression -->
+      <group name="Include Group">
+        <method signature="TestFacebookSignUp.TCID_002_include()[pri:0, instance:com.scripts.TestFacebookSignUp@28f67ac7]" name="TCID_002_include" class="com.scripts.TestFacebookSignUp"/>
+        <method signature="TestScript.TCID_004_include()[pri:0, instance:com.scripts.TestScript@1fbc7afb]" name="TCID_004_include" class="com.scripts.TestScript"/>
+      </group> <!-- Include Group -->
     </groups>
-    <test name="Default test" duration-ms="152708" started-at="2021-05-19T12:25:29Z" finished-at="2021-05-19T12:28:01Z">
+    <test name="Smoke Testing" duration-ms="47" started-at="2021-05-20T12:00:31Z" finished-at="2021-05-20T12:00:31Z">
+      <class name="com.scripts.TestFacebookSignUp">
+        <test-method status="PASS" signature="TCID_002_include()[pri:0, instance:com.scripts.TestFacebookSignUp@28f67ac7]" name="TCID_002_include" duration-ms="12" started-at="2021-05-20T17:30:31Z" finished-at="2021-05-20T17:30:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TCID_002_include -->
+        <test-method status="PASS" signature="TCID_004_regression()[pri:0, instance:com.scripts.TestFacebookSignUp@28f67ac7]" name="TCID_004_regression" duration-ms="4" started-at="2021-05-20T17:30:31Z" finished-at="2021-05-20T17:30:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TCID_004_regression -->
+      </class> <!-- com.scripts.TestFacebookSignUp -->
       <class name="com.scripts.TestScript">
-        <test-method status="FAIL" signature="initializeWebBrowser()[pri:0, instance:com.scripts.TestScript@3834d63f]" name="initializeWebBrowser" is-config="true" duration-ms="0" started-at="2021-05-19T17:55:29Z" finished-at="2021-05-19T17:55:29Z">
-          <exception class="org.openqa.selenium.WebDriverException">
-            <message>
-              <![CDATA[Timed out waiting for driver server to start.
-Build info: version: '3.8.1', revision: '6e95a6684b', time: '2017-12-01T18:33:54.468Z'
-System info: host: 'DESKTOP-T6M756F', ip: '192.168.43.211', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_251'
-Driver info: driver.version: ChromeDriver]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.WebDriverException: Timed out waiting for driver server to start.
-Build info: version: '3.8.1', revision: '6e95a6684b', time: '2017-12-01T18:33:54.468Z'
-System info: host: 'DESKTOP-T6M756F', ip: '192.168.43.211', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_251'
-Driver info: driver.version: ChromeDriver
-	at org.openqa.selenium.remote.service.DriverService.waitUntilAvailable(DriverService.java:192)
-	at org.openqa.selenium.remote.service.DriverService.start(DriverService.java:178)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:79)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:601)
-	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:219)
-	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:142)
-	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:181)
-	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:168)
-	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:123)
-	at com.scripts.TestScript.initializeWebBrowser(TestScript.java:22)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
-	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:521)
-	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:213)
-	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:140)
-	at org.testng.TestRunner.beforeRun(TestRunner.java:645)
-	at org.testng.TestRunner.run(TestRunner.java:613)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:357)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:310)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:259)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1200)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1125)
-	at org.testng.TestNG.run(TestNG.java:1033)
-	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
-Caused by: org.openqa.selenium.net.UrlChecker$TimeoutException: Timed out waiting for [http://localhost:26221/status] to be available after 22390 ms
-	at org.openqa.selenium.net.UrlChecker.waitUntilAvailable(UrlChecker.java:100)
-	at org.openqa.selenium.remote.service.DriverService.waitUntilAvailable(DriverService.java:187)
-	... 31 more
-Caused by: java.util.concurrent.TimeoutException
-	at java.util.concurrent.FutureTask.get(Unknown Source)
-	at com.google.common.util.concurrent.SimpleTimeLimiter.callWithTimeout(SimpleTimeLimiter.java:147)
-	at org.openqa.selenium.net.UrlChecker.waitUntilAvailable(UrlChecker.java:75)
-	... 32 more
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.WebDriverException -->
+        <test-method status="PASS" signature="TCID_004_include()[pri:0, instance:com.scripts.TestScript@1fbc7afb]" name="TCID_004_include" duration-ms="1" started-at="2021-05-20T17:30:31Z" finished-at="2021-05-20T17:30:31Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- initializeWebBrowser -->
-        <test-method status="SKIP" signature="TCID_001_verifyLoginPage()[pri:0, instance:com.scripts.TestScript@3834d63f]" name="TCID_001_verifyLoginPage" duration-ms="3" started-at="2021-05-19T17:58:01Z" finished-at="2021-05-19T17:58:01Z">
+        </test-method> <!-- TCID_004_include -->
+        <test-method status="PASS" signature="TCID_004_regression()[pri:0, instance:com.scripts.TestScript@1fbc7afb]" name="TCID_004_regression" duration-ms="4" started-at="2021-05-20T17:30:31Z" finished-at="2021-05-20T17:30:31Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TCID_001_verifyLoginPage -->
-        <test-method status="SKIP" signature="TCID_003_verifyHomepage()[pri:0, instance:com.scripts.TestScript@3834d63f]" name="TCID_003_verifyHomepage" duration-ms="3" started-at="2021-05-19T17:58:01Z" finished-at="2021-05-19T17:58:01Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TCID_003_verifyHomepage -->
-        <test-method status="SKIP" signature="TCID_004_verifyTearDown()[pri:0, instance:com.scripts.TestScript@3834d63f]" name="TCID_004_verifyTearDown" is-config="true" duration-ms="0" started-at="2021-05-19T17:58:01Z" finished-at="2021-05-19T17:58:01Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TCID_004_verifyTearDown -->
+        </test-method> <!-- TCID_004_regression -->
       </class> <!-- com.scripts.TestScript -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    </test> <!-- Smoke Testing -->
+  </suite> <!-- TestNg_Smoke_Suite -->
 </testng-results>

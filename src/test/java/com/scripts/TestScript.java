@@ -2,48 +2,80 @@ package com.scripts;
 
 
 
-import java.util.concurrent.TimeUnit;
 
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.*;
 
+import com.pageFactory.*;
 
-import com.pageFactory.Homepage;
-import com.pageFactory.Loginpage;
 
-public class TestScript  {
-	 WebDriver driver;
-	 @BeforeTest
-	 public  void initializeWebBrowser() {
-			
-		   System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir")+"/src/main/resources/chromedriver.exe");
-		   driver=new ChromeDriver();
-		   driver.get("http://demo.guru99.com/V4/");
-		   driver.manage().window().maximize();
-		   driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-			System.out.println("Browser Initialized");	
-		    }
+public class TestScript extends BaseTest {
 	
+	 public LoginPage objLoginPage;
+	 public HomePage objHomePage;
+	 
+	 public void initilizePages(){
+		 objLoginPage=new LoginPage();
+		 objHomePage=new HomePage();	
+	 }
+	
+	 /**
+	  * Method to intialize web browser
+	  */
+	 @Test(groups={"Smoke"})
+	 public  void initializeWebEnvironment() {
+			this.initializeWebBrowser();
+			this.initilizePages();
+		   }
+	
+	 /**
+	  * Method to verify LoginPage 
+	  */
 	@Test(priority=1)
 	public void TCID_001_verifyLoginPage(){
-		Loginpage objLoginpage=new Loginpage(driver);
-		 String loginPageTitle = objLoginpage.getLoginTitle();
+		
+		 String loginPageTitle = objLoginPage.getLoginPageTitleText();
 
 		 Assert.assertTrue(loginPageTitle.toLowerCase().contains("guru99 bank"));
 
-		objLoginpage.loginToGuru99("mngr327539","vAqejaq");
-	}
-	@Test(priority=2)
-	public void TCID_003_verifyHomepage(){
-		Homepage objHomepage=new Homepage(driver);
-		objHomepage.getHomePageDashboardUserName();
+		 objLoginPage.loginToGuru99("mngr327539","vAqejaq");
 	}
 	
+	
+	/**
+	 * Method to verify HomePage
+	 */
+	@Test(priority=2)
+	public void TCID_003_verifyHomepage(){
+		
+		objHomePage.getHomePageDashboardNameText();
+	}
+	
+	
+	@Test(groups= {"Include Group"})  
+	public void TCID_004_include()   
+	{  
+	System.out.println("This  test case is included in guru99 Test Script ");  
+	}
+	
+	@Test(groups= {"Sanity"})  
+	public void TCID_005_sanity()   
+	{  
+	System.out.println("This  test case is added in sanity group ");  
+	}
+	
+	@Test(groups= {"Regression"})  
+	public void TCID_004_regression()   
+	{  
+	System.out.println("This  test case is added in sanity group ");  
+	}
+	
+	/**
+	 * Method to verify Browser Termination
+	 */
 	@AfterTest
-	public void TCID_004_verifyTearDown(){
-		driver.close();
+	public void TCID_005_verifyTearDown(){
+	   this.tearDown();
 	}
 
 }

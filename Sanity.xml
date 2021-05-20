@@ -1,0 +1,19 @@
+<suite name="TestNg_Smoke_Suite">  
+	<test name="Smoke Testing">  
+		<groups>  
+			<run>  
+				<include name="Sanity"/> 
+				<include name="Include Group"/>  
+				<exclude name="Exclude Group"/>  
+			</run>  
+		</groups> 
+		
+		 
+			<classes>  
+					<class name="com.scripts.TestFacebookSignUp"/>
+					<class name="com.scripts.TestScript"/>   
+			</classes>  
+	</test> <!-- Test -->
+	 
+	 
+	</suite>

@@ -5,9 +5,10 @@
     <classes>
       <class name="com.scripts.TestScript">
         <methods>
+          <include name="initializeWebEnvironment"/>
           <include name="TCID_003_verifyHomepage"/>
+          <include name="TCID_004_verifyTearDown"/>
           <include name="TCID_001_verifyLoginPage"/>
-          <include name="initializeWebBrowser"/>
         </methods>
       </class> <!-- com.scripts.TestScript -->
     </classes>
