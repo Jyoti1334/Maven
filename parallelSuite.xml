@@ -1,0 +1,14 @@
+<suite name="Parallel Testing" parallel="tests">
+	<test name="Firefox testing">
+		<parameter name="browserName" value="firefox"></parameter>
+		<classes>
+			<class name="com.scripts.parallelTest.TestBrowser"/>
+		</classes>
+	</test>
+	<test name="Chrome testing">
+		<parameter name="browserName" value="chrome"></parameter>
+		<classes>
+			<class name="com.scripts.parallelTest.TestBrowser"/>
+		</classes>
+	</test>
+</suite>	

@@ -1,13 +1,17 @@
 package com.scripts;
 
+import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeClass;
+
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import com.facebookSignup.*;
 
 
-import com.facebookSignup.BaseTest;
+import com.generic.BaseTest;
+import com.generic.Utilities;
+import com.generic.Wrapper_Function;
 
 public class TestFacebookSignUp extends BaseTest{
 	public Utilities objUtilities1;
@@ -18,18 +22,19 @@ public class TestFacebookSignUp extends BaseTest{
 	
 	public void initilizePages(){
 	    objUtilities1=new Utilities();
-		objWrapperFun=new Wrapper_Function();
-		objFacebookPageObjects=new  FacebookSignUpPageObjects();
-		objFacebookPage=new FacebookPage();
+		objWrapperFun=PageFactory.initElements(BaseTest.driver, Wrapper_Function.class);
+		objFacebookPageObjects=new  FacebookSignUpPageObjects(driver);
+		objFacebookPage=new FacebookPage(driver);
 	 }
 	 
-	 @Test(groups={"Smoke"})
+	// @Test(groups={"Smoke"})
+	@BeforeTest
 	 public  void initializeWebEnvironment() {
 			this.initializeWebBrowser();
 			this.initilizePages();
 		   }
      
-	 @Test(groups= {"Exclude Group"})  
+	 @Test  
 		public void TCID_001_verifySignUp(){
 			 
 		    objFacebookPage.toCreateNewAccount();

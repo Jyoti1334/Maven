@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [TestNg_Sanity_Suite]">
+  <test name="Snaity Testing(failed)">
+    <groups>
+      <run>
+        <include name="Smoke"/>
+        <include name="Sanity"/>
+        <exclude name="Include Group"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="com.scripts.TestScript">
+        <methods>
+          <include name="TCID_001_verifyLoginPage"/>
+        </methods>
+      </class> <!-- com.scripts.TestScript -->
+    </classes>
+  </test> <!-- Snaity Testing(failed) -->
+</suite> <!-- Failed suite [TestNg_Sanity_Suite] -->

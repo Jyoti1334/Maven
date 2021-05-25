@@ -1,22 +1,24 @@
-package com.facebookSignup;
+package com.generic;
 
 import java.util.concurrent.TimeUnit;
 
-
-
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 
-public class Wrapper_Function  {
-	
+public class Wrapper_Function   {
+	 WebDriver driver;
 
 	
 	 Select select;
+	 public Wrapper_Function(WebDriver driver){
+		 this.driver=driver;
+	 }
 	
 	
        public  void setImplicitwait(int intSecond){
 		
-    	   BaseTest.driver.manage().timeouts().implicitlyWait(intSecond, TimeUnit.SECONDS);
+    	   driver.manage().timeouts().implicitlyWait(intSecond, TimeUnit.SECONDS);
 	   }
      
 

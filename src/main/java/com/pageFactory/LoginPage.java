@@ -1,12 +1,13 @@
 package com.pageFactory;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 
 
 
 public class LoginPage {
 
-	 //WebDriver driver;
+	 WebDriver driver;
 	By loc_inp_userName=By.name("uid");
 	By loc_inp_passWord=By.name("password");
 	By loc_btn_loginButton=By.xpath("//input[@name='btnLogin']");
@@ -18,10 +19,10 @@ public class LoginPage {
 	 * my mutliple methods can use this parameter
 	 * @param driver
 	 */
-//	 public LoginPage(WebDriver driver){
-//	        this.driver = driver;
-//	       
-//	    }
+	 public LoginPage(WebDriver driver){
+	        this.driver = driver;
+	       
+	    }
 	 
 	 
 	 /**
@@ -29,7 +30,7 @@ public class LoginPage {
 	  * @param strUserName
 	  */
 	 public void setUserName(String strUserName){
-	       BaseTest.driver.findElement(loc_inp_userName).sendKeys(strUserName);
+	       driver.findElement(loc_inp_userName).sendKeys(strUserName);
 	    }
 	 
 	 
@@ -38,14 +39,14 @@ public class LoginPage {
 	  * @param strPassword
 	  */
 	  public void setPassword(String strPassword){
-	         BaseTest.driver.findElement(loc_inp_passWord).sendKeys(strPassword);
+	         driver.findElement(loc_inp_passWord).sendKeys(strPassword);
 	    }
 	  
 	  /**
 	   * Method to click on login button of guru99 Bank
 	   */
 	  public void clickLogin(){
-          BaseTest.driver.findElement(loc_btn_loginButton).click();
+          driver.findElement(loc_btn_loginButton).click();
         }
 	  
 	  
@@ -55,7 +56,7 @@ public class LoginPage {
 	   */
 	  public String getLoginPageTitleText(){
 
-		   String strLoginPageTitle=  BaseTest.driver.findElement(loc_txt_loginPageTitleText).getText();
+		   String strLoginPageTitle=  driver.findElement(loc_txt_loginPageTitleText).getText();
 		   System.out.println("Login page title is :"+strLoginPageTitle);
 		   
 		     return strLoginPageTitle;

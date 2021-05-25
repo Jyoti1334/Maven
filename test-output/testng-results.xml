@@ -1,39 +1,118 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="4" passed="4">
+<testng-results skipped="0" failed="0" total="5" passed="5">
   <reporter-output>
   </reporter-output>
-  <suite name="TestNg_Smoke_Suite" duration-ms="47" started-at="2021-05-20T12:00:31Z" finished-at="2021-05-20T12:00:31Z">
+  <suite name="Default suite" duration-ms="239" started-at="2021-05-25T03:49:36Z" finished-at="2021-05-25T03:49:36Z">
     <groups>
-      <group name="Regression">
-        <method signature="TestFacebookSignUp.TCID_004_regression()[pri:0, instance:com.scripts.TestFacebookSignUp@28f67ac7]" name="TCID_004_regression" class="com.scripts.TestFacebookSignUp"/>
-        <method signature="TestScript.TCID_004_regression()[pri:0, instance:com.scripts.TestScript@1fbc7afb]" name="TCID_004_regression" class="com.scripts.TestScript"/>
-      </group> <!-- Regression -->
-      <group name="Include Group">
-        <method signature="TestFacebookSignUp.TCID_002_include()[pri:0, instance:com.scripts.TestFacebookSignUp@28f67ac7]" name="TCID_002_include" class="com.scripts.TestFacebookSignUp"/>
-        <method signature="TestScript.TCID_004_include()[pri:0, instance:com.scripts.TestScript@1fbc7afb]" name="TCID_004_include" class="com.scripts.TestScript"/>
-      </group> <!-- Include Group -->
     </groups>
-    <test name="Smoke Testing" duration-ms="47" started-at="2021-05-20T12:00:31Z" finished-at="2021-05-20T12:00:31Z">
-      <class name="com.scripts.TestFacebookSignUp">
-        <test-method status="PASS" signature="TCID_002_include()[pri:0, instance:com.scripts.TestFacebookSignUp@28f67ac7]" name="TCID_002_include" duration-ms="12" started-at="2021-05-20T17:30:31Z" finished-at="2021-05-20T17:30:31Z">
+    <test name="Default test" duration-ms="239" started-at="2021-05-25T03:49:36Z" finished-at="2021-05-25T03:49:36Z">
+      <class name="com.scripts.testDataProvider.TestDataProvider">
+        <test-method status="PASS" signature="studentRegistration(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.scripts.testDataProvider.TestDataProvider@1ae369b7]" name="studentRegistration" duration-ms="81" started-at="2021-05-25T09:19:36Z" data-provider="getData" finished-at="2021-05-25T09:19:36Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Mukesh]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Otwani]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Motwani@gmail.com]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TCID_002_include -->
-        <test-method status="PASS" signature="TCID_004_regression()[pri:0, instance:com.scripts.TestFacebookSignUp@28f67ac7]" name="TCID_004_regression" duration-ms="4" started-at="2021-05-20T17:30:31Z" finished-at="2021-05-20T17:30:31Z">
+        </test-method> <!-- studentRegistration -->
+        <test-method status="PASS" signature="studentRegistration(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.scripts.testDataProvider.TestDataProvider@1ae369b7]" name="studentRegistration" duration-ms="1" started-at="2021-05-25T09:19:36Z" data-provider="getData" finished-at="2021-05-25T09:19:36Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Amod]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Mahajan]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[amahajan@hotmail.com]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TCID_004_regression -->
-      </class> <!-- com.scripts.TestFacebookSignUp -->
-      <class name="com.scripts.TestScript">
-        <test-method status="PASS" signature="TCID_004_include()[pri:0, instance:com.scripts.TestScript@1fbc7afb]" name="TCID_004_include" duration-ms="1" started-at="2021-05-20T17:30:31Z" finished-at="2021-05-20T17:30:31Z">
+        </test-method> <!-- studentRegistration -->
+        <test-method status="PASS" signature="studentRegistration(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.scripts.testDataProvider.TestDataProvider@1ae369b7]" name="studentRegistration" duration-ms="1" started-at="2021-05-25T09:19:36Z" data-provider="getData" finished-at="2021-05-25T09:19:36Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Animesh]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Prashant]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[aprashant@gmail.com]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TCID_004_include -->
-        <test-method status="PASS" signature="TCID_004_regression()[pri:0, instance:com.scripts.TestScript@1fbc7afb]" name="TCID_004_regression" duration-ms="4" started-at="2021-05-20T17:30:31Z" finished-at="2021-05-20T17:30:31Z">
+        </test-method> <!-- studentRegistration -->
+        <test-method status="PASS" signature="studentRegistration(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.scripts.testDataProvider.TestDataProvider@1ae369b7]" name="studentRegistration" duration-ms="2" started-at="2021-05-25T09:19:36Z" data-provider="getData" finished-at="2021-05-25T09:19:36Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Ankur]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Singh]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[asingh@gmail.com]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TCID_004_regression -->
-      </class> <!-- com.scripts.TestScript -->
-    </test> <!-- Smoke Testing -->
-  </suite> <!-- TestNg_Smoke_Suite -->
+        </test-method> <!-- studentRegistration -->
+        <test-method status="PASS" signature="studentRegistration(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.scripts.testDataProvider.TestDataProvider@1ae369b7]" name="studentRegistration" duration-ms="2" started-at="2021-05-25T09:19:36Z" data-provider="getData" finished-at="2021-05-25T09:19:36Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Amritansh]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Kumar]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[akumar@gmail.com]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- studentRegistration -->
+      </class> <!-- com.scripts.testDataProvider.TestDataProvider -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

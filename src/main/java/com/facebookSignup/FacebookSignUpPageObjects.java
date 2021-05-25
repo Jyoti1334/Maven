@@ -1,11 +1,18 @@
 package com.facebookSignup;
 
-import org.openqa.selenium.By;
 
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.PageFactory;
+
+import com.generic.BaseTest;
+import com.generic.Wrapper_Function;
 
 
 public class FacebookSignUpPageObjects  {
+	WebDriver driver;
      By loc_inp_firstName=By.xpath("//input[@name='firstname']");
 	 By loc_inp_lastName=By.xpath("//input[@name='lastname']");
 	 By loc_inp_mobileNumber=By.xpath("//input[@name='reg_email__']");
@@ -20,38 +27,42 @@ public class FacebookSignUpPageObjects  {
 	 By loc_rbGender_customRadioButton=By.xpath("//input[@value='-1]");
 	 By loc_btn_signUpButton=By.xpath("//button[@name='websubmit']");
 	 
-	Wrapper_Function objWrapperFun=new Wrapper_Function();
+	Wrapper_Function objWrapperFun=PageFactory.initElements(BaseTest.driver, Wrapper_Function.class);
+	
+	public FacebookSignUpPageObjects(WebDriver driver){
+		this.driver=driver;
+	}
 	
 		      //display first name 
 	     public void setFirstName(String strFirstName) {
-	    BaseTest. driver.findElement(loc_inp_firstName).
+	     driver.findElement(loc_inp_firstName).
 	     sendKeys(strFirstName);
 	    objWrapperFun.setImplicitwait(5);
 		   }
        //display surname
        public void setLastName(String strLastName) {
-    	   BaseTest.driver.findElement(loc_inp_lastName).
+    	   driver.findElement(loc_inp_lastName).
        sendKeys(strLastName);
     	   objWrapperFun.setImplicitwait(5);
 	   }
       //display Mobile number
        public void setMobileNumber(String strMobileNo) {
-    	   BaseTest.driver.findElement(loc_inp_mobileNumber).
+    	   driver.findElement(loc_inp_mobileNumber).
        sendKeys(strMobileNo);
     	   objWrapperFun.setImplicitwait(5);
 	   }
        
        public void setEmailId(String strEmailId1){
-    	   BaseTest.driver.findElement(loc_inp_emailID).sendKeys(strEmailId1);
+    	   driver.findElement(loc_inp_emailID).sendKeys(strEmailId1);
     	   objWrapperFun.setImplicitwait(5);
        }
        public void setRe_EnterEmailId(String strEmailId){
-    	   BaseTest.driver.findElement(loc_inp_rewiriteEmailId).sendKeys(strEmailId);
+    	   driver.findElement(loc_inp_rewiriteEmailId).sendKeys(strEmailId);
     	   objWrapperFun.setImplicitwait(5);
        }
        //display password
        public String setPassword(String strPassword) {
-    	   BaseTest.driver.findElement(loc_inp_passWord).
+    	   driver.findElement(loc_inp_passWord).
        sendKeys(strPassword);
     	   objWrapperFun.setImplicitwait(5);
 	   return strPassword;
@@ -61,7 +72,7 @@ public class FacebookSignUpPageObjects  {
     
         
       public void setBirthDate(String strDate){
-  		WebElement dateDropDown= BaseTest.driver.findElement(loc_drp_dayDropdown);
+  		WebElement dateDropDown= driver.findElement(loc_drp_dayDropdown);
   		//By   dateDropDown= By.id("day");
     	  
   		objWrapperFun.selectValueFromdropdown( dateDropDown,strDate);
@@ -71,14 +82,14 @@ public class FacebookSignUpPageObjects  {
     }
        
        public void setBirthMonth(String strMonth){
-    		WebElement monthDropDown= BaseTest.driver.findElement(loc_drp_monthDropdown);
+    		WebElement monthDropDown= driver.findElement(loc_drp_monthDropdown);
       		objWrapperFun.selectValueFromdropdown( monthDropDown,strMonth);
       		 objWrapperFun.setImplicitwait(5);
   	   //objWrapperFun.selectDropDown("//span[@data-name='birthday_wrapper']//select[@id='month']", strMonth); 
  		 
  	   }
       public void setBirthYear(String strYear){
-  		WebElement yearDropDown= BaseTest.driver.findElement(loc_drp_yearDropdown);
+  		WebElement yearDropDown= driver.findElement(loc_drp_yearDropdown);
   		objWrapperFun.selectValueFromdropdown( yearDropDown,strYear);
   		 objWrapperFun.setImplicitwait(5);
     	  // objWrapperFun.selectDropDown("//span[@data-name='birthday_wrapper']//select[@id='year']", strYear); 
@@ -87,18 +98,18 @@ public class FacebookSignUpPageObjects  {
        public void setUserGender(String strGender){
 	        
 	        if(strGender.equalsIgnoreCase("female")){
-	        	BaseTest.driver.findElement(loc_rbGender_femaleRadioButton).click();
+	        	driver.findElement(loc_rbGender_femaleRadioButton).click();
 	          
 	        }else if(strGender.equalsIgnoreCase("male")){
-	        	BaseTest. driver.findElement(loc_rbGender_maleRadioButton).click();
+	        	 driver.findElement(loc_rbGender_maleRadioButton).click();
 	        }else{
-	        	BaseTest. driver.findElement(loc_rbGender_customRadioButton).click();
+	        	 driver.findElement(loc_rbGender_customRadioButton).click();
 	            
 	    }
 	        }
 	    
        public void clickonSignUp() {
-    	   BaseTest.driver.findElement(loc_btn_signUpButton).click();
+    	   driver.findElement(loc_btn_signUpButton).click();
     	   objWrapperFun.setImplicitwait(5);
        }
 		

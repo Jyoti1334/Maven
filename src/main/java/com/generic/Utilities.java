@@ -1,4 +1,4 @@
-package com.facebookSignup;
+package com.generic;
 
 import java.util.Random;
 

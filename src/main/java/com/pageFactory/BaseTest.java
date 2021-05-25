@@ -6,7 +6,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class BaseTest {
-	 static  WebDriver driver=null;
+	public static  WebDriver driver=null;
 	public  void initializeWebBrowser() {
 		
 		   System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir")+"/src/main/resources/chromedriver.exe");

@@ -15,14 +15,15 @@ public class TestScript extends BaseTest {
 	 public HomePage objHomePage;
 	 
 	 public void initilizePages(){
-		 objLoginPage=new LoginPage();
-		 objHomePage=new HomePage();	
+		 objLoginPage=new LoginPage(driver);
+		 objHomePage=new HomePage(driver);	
 	 }
 	
 	 /**
 	  * Method to intialize web browser
 	  */
-	 @Test(groups={"Smoke"})
+	// @Test(groups={"Smoke"})
+	 @BeforeTest
 	 public  void initializeWebEnvironment() {
 			this.initializeWebBrowser();
 			this.initilizePages();
